@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component// kullandiginiz class dan obje olusturulur ve IOC container icine konur
 		//new StudentBean01(); gibi fonskyionu var 
-public class StudentBean01 {
+public class StudentBean01 implements StudentInterface{
 	//Bean means in SpringBoot object
 	private String name;
 	private int age;
@@ -42,6 +42,12 @@ public class StudentBean01 {
 	@Override
 	public String toString() {
 		return "StudentBean01: name=" + name + ", age=" + age + ", id=" + id;
+	}
+
+	@Override
+	public String study() {
+		//Abstract methodlar override edilmek zorundadir
+		return "I am coming from StudentBean01... ";
 	}
 
 	
