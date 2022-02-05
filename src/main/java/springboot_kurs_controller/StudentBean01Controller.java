@@ -1,4 +1,4 @@
-package com.techpro.springboot_kurs;
+package springboot_kurs_controller;
 
 import java.util.List;
 
@@ -73,10 +73,10 @@ public class StudentBean01Controller {
 	@Autowired
 	StudentBean01 t;// Class ismini yazarak IOC Container dan istediginiz objeyi alabilirsiniz.
 
-	@GetMapping(path = "/getStudy1")
-	public String getMethod7() {
-		return t.study();
-	}
+//	@GetMapping(path = "/getStudy1")
+//	public String getMethod7() {
+//		return t.study();
+//	}
 	
 	@Autowired
 	@Qualifier(value="studentBean02")// javaya bu sekilde hangisini getirecegini söylüyoruz
